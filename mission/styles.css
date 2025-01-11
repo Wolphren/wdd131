@@ -1,0 +1,40 @@
+.mission_content{
+    margin: auto;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    width: 600px;
+    padding: 0 10%;
+    border-style: solid;
+    border: solid gray;
+    border-width: 1px;
+    
+}
+header {
+    margin-top: 10%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1.5;
+}
+header h2{
+    width: 90%;
+    margin: auto;
+    color: #006EB6;
+    font-size: 17px;
+    border: solid gray;
+    border-width: 0 0 1px 0;
+}
+.mission_text{
+    text-align: left;
+}
+.mission_text h4{
+    margin-bottom: 1%;
+}
+.mission_list li{
+    padding: 2%;
+    text-align: left;
+}
+footer img{
+    margin: 5% 0;
+    width: 150px;
+}
