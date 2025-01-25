@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+ :root {
+ --primary-color: #52489c;
+ --secondary-color: #59c3c3;
+ --accent-color: #f45b69;
+ --text-dark: #333;
+ --text-light: #ebebeb;
+ --primary-font: Arial, Helvetica,sans-serif;
+ --secondary-font: Mooli, san-serif;
+ }
+body{
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+    margin: auto;
+}
+header{
+    font-family: var(--secondary-font);
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+}
+header h1{
+    font-size: 3rem;
+}
+.menu-button {
+    display: block;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 8px;
+    font-size: .8em;
+    cursor: pointer;
+}
+nav{
+    display: none;
+    flex-direction: column;
+    
+}
+nav.open {
+    display: flex;
+}
+nav a{
+    display: block;
+    padding: 8px;
+    text-align: center;
+    font-size: .7em;
+    background-color: var(--primary-color);
+    border-bottom: 1px solid var(--secondary-color);
+    color: var(--text-light);
+    text-decoration: underline;
+}
+nav a:hover{
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+header, h1{
+    font-size: 6rem;
+}
+h4{
+    font-family: var(--secondary-font);
+    color: var(--text-dark);
+    font-size: 2rem;
+    text-align: center;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+img{
+    max-width: 100%;
+    object-fit: cover;
+
+}
+footer{
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+@media screen and (min-width: 700px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .menu-button {
+        display: none;
+    }
+    nav {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+    }
+    nav a {
+        padding: 10px 20px;
+        font-size: .35em;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
