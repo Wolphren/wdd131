@@ -13,6 +13,36 @@ body{
     font-size: 1.2em;
     margin: auto;
 }
+.viewer{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.close-viewer{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.viewer img{
+    max-height: 90%;
+    max-width: 90%;
+    object-fit: contain;
+}
 header{
     font-family: var(--secondary-font);
     background-color: var(--primary-color);
