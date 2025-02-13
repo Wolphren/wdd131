@@ -63,6 +63,8 @@ nav a {
     display: grid;
     grid-template-columns: 1fr 300px;
     gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 
@@ -76,24 +78,31 @@ nav a {
 .article-metadata {
     text-align: right;
     font-size: 0.95em;
-    line-height: 1.6;
+    line-height: 1.4;
+    padding-right: 20px;
+    border-right: 1px solid #e6e6e6;
 }
 
 .article-date {
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.2em;
+}
+
+.article-content {
+    padding-left: 10px;
 }
 
 .article-content h2 {
     color: #AF1B3F;
     font-family: Lora, Impact, serif;
     font-size: 1.75em;
+    margin-top: -5px;
     margin-bottom: 20px;
 }
 
 .article-content img {
     max-width: 200px;
-    margin-bottom: 15px;
+    margin: 0 auto 15px;
     display: block;
 }
 
