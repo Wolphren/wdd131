@@ -1,0 +1,177 @@
+body 
+{
+    font-family: 'Courier New', monospace;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+main
+{
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+}
+form
+{
+    display: grid;
+    grid-template-areas: "front" "back" "submit";
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+    position: relative;
+    max-width: 450px;
+    margin: 0 auto;
+}
+.cardFront, .cardBack
+{
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    padding: 20px;
+    position: relative;
+}
+.cardFront 
+{
+    grid-area: front;
+    z-index: 2;
+    display: grid;
+    grid-template-areas: "total card-image" "number number" "holder expiry";
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 3fr 1fr;
+    gap: 15px;
+    padding-bottom: 40px;
+    height: 220px;
+    justify-self: start;
+}
+
+.totalAmount 
+{
+    grid-area: total;
+    font-weight: bold;
+    align-self: center;
+}
+
+.cardImage 
+{
+    grid-area: card-image;
+    justify-self: end;
+    background-color: #ff7f50;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.cardNumberBox
+{
+    grid-area: number;
+    margin-top: 10px;
+}
+
+.cardHolderBox
+{
+    grid-area: holder;
+}
+
+.expirationBox
+{
+    grid-area: expiry;
+}
+
+.expirationInput 
+{
+    display: flex;
+    gap: 10px;
+}
+
+.expirationInputs input 
+{
+    width: 45px;
+}
+.cardBack 
+{
+    grid-area: back;
+    z-index: 1;
+    margin-top: -230px;
+    justify-self: end;
+    margin-left: 100px;
+    height: 180px;
+    padding-top: 60px;
+}
+
+.blackBar 
+{
+    background-color: #333;
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.cvcCvvBox 
+{
+    justify-self: end;
+    margin-top: 110px;
+}
+
+.cvcCvvBox input 
+{
+    width: 70px;
+}
+label 
+{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #333;
+    font-weight: bold;
+}
+input 
+{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+button 
+{
+    grid-area: submit;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    justify-self: end;
+    margin-top: 35px;
+    font-family: 'Courier New', monospace;
+}
+button:hover 
+{
+    background-color: #f0f0f0;
+}
+@media (max-width: 480px) 
+{
+    .card-front, .card-back 
+    {
+        width: 100%;
+    }
+    .card-back 
+    {
+        margin-left: 0;
+        margin-top: -20px;
+    }
+    form 
+    {
+        grid-template-areas:
+            "front"
+            "back"
+            "submit";
+    }
+}
